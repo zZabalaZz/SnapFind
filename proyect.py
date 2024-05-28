@@ -40,24 +40,13 @@ with st.sidebar:
     st.image('foto.jpg')
     st.subheader("Reconocimiento de imagen para Productos")
     confianza = st.slider("Nivel de confianza mínimo", min_value=0, max_value=100, value=50)
-    st.write("""SnapFind utiliza la inteligencia artificial para ofrecer una experiencia de reconocimiento de productos rápida, precisa y eficiente. A continuación, te explicamos cómo funciona:
+    st.write("""SnapFind emplea inteligencia artificial para reconocer productos a partir de imágenes de manera rápida y precisa:
 
-Procesamiento de Imágenes:
-Cuando tomas una foto de un producto, SnapFind emplea técnicas avanzadas de procesamiento de imágenes para mejorar y preparar la imagen para el análisis. Esto incluye la corrección de iluminación, enfoque y eliminación de ruido, asegurando que la imagen esté en las mejores condiciones para el reconocimiento.
-
-Redes Neuronales Convolucionales (CNN):
-En el núcleo de nuestro sistema de reconocimiento de imágenes, utilizamos Redes Neuronales Convolucionales (CNN). Estas redes están especialmente diseñadas para procesar y analizar datos visuales. Las CNN escanean la imagen en busca de patrones y características específicas que corresponden a productos conocidos.
-
-Base de Datos Extensa y Entrenamiento:
-SnapFind está entrenado con una vasta base de datos de imágenes de productos etiquetadas. Durante el entrenamiento, la IA aprende a identificar distintos productos a partir de miles de ejemplos, mejorando su precisión con el tiempo. Este proceso, conocido como aprendizaje profundo, permite que SnapFind reconozca una amplia variedad de artículos, incluso aquellos que no ha visto antes.
-
-Algoritmos de Clasificación y Recuperación:
-Una vez que la CNN ha procesado la imagen, los algoritmos de clasificación entran en acción para determinar cuál es el producto en la foto. Luego, los algoritmos de recuperación buscan en nuestra base de datos para encontrar información relevante sobre el producto, incluyendo descripciones, especificaciones y opciones de compra.
-
-Mejora Continua:
-SnapFind no se detiene en el momento del lanzamiento. Continuamente recopilamos datos y retroalimentación de los usuarios para entrenar y mejorar nuestros modelos de IA. Esto significa que SnapFind se vuelve más inteligente y preciso con cada uso.
-
-Con SnapFind, la inteligencia artificial transforma una simple foto en una puerta de acceso a un mundo de información y oportunidades de compra, haciendo que el reconocimiento de productos sea más sencillo y accesible que nunca.""")
+    - Procesamiento de Imágenes: Mejora y prepara las fotos para el análisis.
+    - Redes Neuronales Convolucionales (CNN): Analiza y detecta patrones en las imágenes.
+    - Base de Datos Extensa: Entrenamiento con miles de imágenes para mejorar la precisión.
+    - Algoritmos de Clasificación: Identifica el producto y busca información relevante.
+La IA de SnapFind convierte una simple foto en una puerta de acceso a información detallada y opciones de compra""")
 
 st.title("SnapFind")
 st.header("Bienvenido a SnapFind.")
