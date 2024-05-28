@@ -39,6 +39,7 @@ with st.sidebar:
     st.image('foto.jpg')
     st.title("Reconocimiento de imagen")
     st.subheader("Reconocimiento de imagen para Productos")
+    confianza=st.slider()
 
 st.title("SnapFind")
 st.header("Bienvenido a SnapFind.")
