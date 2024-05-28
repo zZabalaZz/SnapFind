@@ -36,8 +36,8 @@ with st.spinner('Modelo está cargando...'):
     model = load_model()
 
 with st.sidebar:
-    st.image('foto.jpg')
     st.title("Reconocimiento de imagen")
+    st.image('foto.jpg')
     st.subheader("Reconocimiento de imagen para Productos")
     confianza = st.slider("Nivel de confianza mínimo", min_value=0, max_value=100, value=50)
 
