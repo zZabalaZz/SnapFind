@@ -18,7 +18,6 @@ st.set_page_config(
     initial_sidebar_state='auto'
 )
 
-
 # Estilo personalizado para ocultar el menú y el pie de página
 hide_streamlit_style = """
     <style>
@@ -32,6 +31,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 def load_model():
     model = tf.keras.models.load_model('./modeloIA.h5')
     return model
+
 with st.spinner('Modelo está cargando...'):
     model = load_model()
 
@@ -39,7 +39,7 @@ with st.sidebar:
     st.image('foto.jpg')
     st.title("Reconocimiento de imagen")
     st.subheader("Reconocimiento de imagen para Productos")
-    confianza=st.slider()
+    confianza = st.slider("Nivel de confianza mínimo", min_value=0, max_value=100, value=50)
 
 st.title("SnapFind")
 st.header("Bienvenido a SnapFind.")
@@ -49,7 +49,7 @@ st.write("""La solución innovadora de inteligencia artificial diseñada para tr
          una tienda física, navegando por catálogos de productos, o descubriendo nuevos artículos en línea, 
          SnapFind es tu aliado perfecto para hacer que el proceso de identificación y adquisición de productos sea rápido, 
          preciso y sin esfuerzo. Nuestra herramienta está impulsada por algoritmos de última generación y una base de datos extensa, 
-         garantizando resultados confiables y relevantes en cuestión de segundos.""") 
+         garantizando resultados confiables y relevantes en cuestión de segundos.""")
 st.image('logo.png')
 st.write("""
          # Detección de Productos
@@ -107,10 +107,10 @@ if image is not None:
     class_name, score = import_and_predict(image, model, class_names)
     
     # Mostrar el resultado
-    if np.max(score) > 0.5:
+    if np.max(score) > confianza / 100:
         st.subheader(f"Producto: {class_name}")
-        st.text(f"Puntuación de confianza: {100 * np.max(score):.2f}%")
+        st.text(f"Puntuación de confianza: {np.max(score) * 100:.2f}%")
     else:
-        st.text(f"No se pudo determinar el producto")
+        st.text(f"No se pudo determinar el producto con suficiente confianza (mínimo {confianza}%)")
 else:
     st.text("Por favor proporciona una imagen")
