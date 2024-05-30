@@ -29,7 +29,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 @st.cache_resource
 def load_model():
-    model = tf.keras.models.load_model('./modeloIA.h5')
+    model = tf.keras.models.load_model('./keras_model.h5')
     return model
 
 with st.spinner('Modelo está cargando...'):
@@ -76,7 +76,7 @@ def import_and_predict(image_data, model, class_names):
     return class_name, score
 
 # Abrir el archivo con la codificación adecuada
-with open("clases.txt", "r", encoding="utf-8") as f:
+with open("labels.txt", "r", encoding="utf-8") as f:
     class_names = f.readlines()
 
 # Opciones para ingresar la imagen
