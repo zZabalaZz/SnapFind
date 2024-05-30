@@ -76,7 +76,7 @@ def import_and_predict(image_data, model, class_names):
     return class_name, score
 
 # Abrir el archivo con la codificación adecuada
-with open("clases.txt", "r", encoding="utf-8") as f:
+with open("labels.txt", "r", encoding="utf-8") as f:
     class_names = f.readlines()
 
 # Opciones para ingresar la imagen
