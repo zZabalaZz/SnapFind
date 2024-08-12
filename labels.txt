@@ -1,10 +1,11 @@
-0 Ariel
-1 Bombombun
-2 Cheetos
-3 Chocoramo
-4 Desodorante
-5 Enjuague_bucal
-6 Head_and_shoulder
-7 Mr_tea
-8 Palmolive
-9 Tosh
+0 Algodón
+1 Crema de Afeitar
+2 Producto de Aseo
+3 Jabón
+4 Jabón Líquido
+5 Papas
+6 Perfume
+7 Salsa
+8 Shampoo
+9 Talco
+10 Termo
